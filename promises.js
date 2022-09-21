@@ -204,47 +204,18 @@ async function postCreation() {
     
     try {
         await createPosts({title : 'Post Three', body : 'This is post three'});
-    }
-    catch(e) {
-        console.log(e);
-    }
-    
-    getPosts()
-    
-    try {
+        getPosts()
+        await deletePosts();
+        getPosts()
+        await deletePosts();
+        getPosts()
+        await deletePosts();
+        getPosts()
         await deletePosts();
     }
     catch(e) {
         console.log(e);
     }
-
-    getPosts()
-
-    try {
-        await deletePosts();
-    }
-    catch(e) {
-        console.log(e);
-    }
-
-    getPosts()
-
-    try {
-        await deletePosts();
-    }
-    catch(e) {
-        console.log(e);
-    }
-
-    getPosts()
-
-    try {
-        await deletePosts();
-    }
-    catch(e) {
-        console.log(e);
-    }
-    
     
     
     const updateLastUserActivityTime = new Promise((resolve, reject) => {
@@ -262,14 +233,7 @@ async function postCreation() {
 
     try {
         await deletePosts();
-    }
-    catch(e) {
-        console.log(e);
-    }
-
-    getPosts();
-
-    try {
+        getPosts();
         await deletePosts();
     }
     catch(e) {
